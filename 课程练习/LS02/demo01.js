@@ -11,6 +11,8 @@ console.log(typeof undefined);
 //undefined
 console.log(typeof {name:"Mike",age:20});
 //object
+console.log(typeof NaN);
+//number
 console.log(typeof function foo(){});
 //function
 console.log(typeof Array);
