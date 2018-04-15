@@ -33,3 +33,33 @@ console.log(f3());
 console.log(f3());
 //3
 //每进行一次console.log(f3()),输出的值就比上一个多一，是因为x一直都没有被释放，之前得到的值一直被保留
+
+//同理
+function foo() {
+    var i = 0;
+    function bar() {
+        console.log(++i);
+    }
+    return bar();
+}
+foo();
+//1
+foo();
+//1
+
+function foo() {
+    var i = 0;
+    function bar() {
+        console.log(++i);
+    }
+    return bar;
+}
+var a = foo();
+var b = foo();
+a();
+//1
+a();
+//2
+b();
+//1
+
