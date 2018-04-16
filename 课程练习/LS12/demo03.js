@@ -13,11 +13,18 @@ console.log(d.count());
 //1
 console.log(c.reset());
 //0
+//把n又变成了0
 console.log(c.count());
 //1
 console.log(d.count());
 //2
-
+/*
+四个闭包
+n和c.c
+n和c.r
+n和d.c
+n和d.r
+*/
 function f1(){
     var n = 999;
     function f2(){
