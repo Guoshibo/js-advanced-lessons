@@ -14,11 +14,13 @@ console.log(len);
 let {toString: s1} = 123;
 //s1 === Number.prototype.toString 
 // true
+//123会先转换为number对象，number对象有一个toString属性，这里的s1就相当于是toString的值
+//这里的toString不能替换成其他任何的代码
 
 let {toString: s2} = true;
 //s2 === Boolean.prototype.toString 
 // true
-
+//同理
 //上面代码中，数值和布尔值的包装对象都有toString属性，因此变量s都能取到值。
 
 //解构赋值的规则是，只要等号右边的值不是对象，就先将其转为对象。
